@@ -16,8 +16,22 @@ dependencies = [
     { name = "streamlit" },
 ]
 
+[package.dev-dependencies]
+dev = [
+    { name = "google-generativeai" },
+    { name = "python-dotenv" },
+    { name = "streamlit" },
+]
+
 [package.metadata]
 requires-dist = [
+    { name = "google-generativeai", specifier = ">=0.8.5" },
+    { name = "python-dotenv", specifier = ">=1.1.1" },
+    { name = "streamlit", specifier = ">=1.49.1" },
+]
+
+[package.metadata.requires-dev]
+dev = [
     { name = "google-generativeai", specifier = ">=0.8.5" },
     { name = "python-dotenv", specifier = ">=1.1.1" },
     { name = "streamlit", specifier = ">=1.49.1" },
