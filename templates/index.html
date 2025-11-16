@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SmartFit Coach</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <h1 class="brand">🏋️ SmartFit Coach</h1>
+        <section class="panel">
+          <h2>👤 Your Profile</h2>
+          <label>Name <input id="name" type="text" placeholder="Your name" /></label>
+          <div class="grid-2">
+            <label>Age <input id="age" type="number" min="10" max="120" value="25" /></label>
+            <label>Weight (kg) <input id="weight" type="number" min="30" max="300" value="70" /></label>
+            <label>Height (cm) <input id="height" type="number" min="50" max="250" value="170" /></label>
+          </div>
+          <div class="bmi" id="bmiBox">BMI: —</div>
+        </section>
+      </aside>
+
+      <main class="main">
+        <section class="chat">
+          <div id="messages" class="messages"></div>
+          <form id="chatForm" class="composer">
+            <input id="message" type="text" placeholder="Ask about fitness, diet, workouts..." autocomplete="off" />
+            <button id="sendBtn" type="submit">Send</button>
+          </form>
+        </section>
+
+        <section class="dashboard">
+          <div class="cards">
+            <div class="card"><div class="card-title">Steps Today</div><div class="card-value" id="stepsVal">—</div></div>
+            <div class="card"><div class="card-title">Calories Burned</div><div class="card-value" id="calVal">—</div></div>
+            <div class="card"><div class="card-title">Water Intake</div><div class="card-value">6/8 glasses 💧</div></div>
+          </div>
+          <div class="tips">
+            <div class="tip-title">Quick Tip</div>
+            <div class="tip-body" id="tipBody">—</div>
+          </div>
+          <div style="margin-top:12px;">
+            <a class="download-link" href="/export.csv">⬇️ Download chat history (CSV)</a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+  </html>
+

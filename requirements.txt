@@ -1,3 +1,6 @@
-streamlit 
 python-dotenv
-google-generativeai
+requests
+Flask>=3.0.0
+
+# python-dotenv is a Python library that helps you store and load secret or configuration values
+#  (like passwords, API keys, database URLs, etc.) from a .env file into your program — safely and easily.
